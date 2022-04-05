@@ -9,7 +9,7 @@ namespace MarLang
 {
     class Program
     {
-        private static string token { get; set; } = "5299416157:AAE57rwYTHzIO-_KbVQkS_SE7MbDj6XuxR4";
+        private static string token { get; set; } = "YOUR TOKEN";
         public static TelegramBotClient client;
 
         static void Main(string[] args)

@@ -21,7 +21,7 @@ namespace MarLang
         {
             int mainIndex;
             ListUsers.TryGetValue(chatId, out mainIndex);
-            using (var package = new ExcelPackage(new FileInfo(@"/Users/vlad/Projects/MarLang/MarLang/WordList.xlsx")))
+            using (var package = new ExcelPackage(new FileInfo(@"YOUR PATH")))
             {
                 var sheet = package.Workbook.Worksheets[mainIndex];
                 for (int i = 4; !string.IsNullOrEmpty(sheet.Cells[$"A{i}"].Text); i++)
@@ -89,7 +89,7 @@ namespace MarLang
             int mainIndex;
             ListUsers.TryGetValue(chatId, out mainIndex);
             StringBuilder result = new StringBuilder();
-            using (var package = new ExcelPackage(new FileInfo(@"/Users/vlad/Projects/MarLang/MarLang/WordList.xlsx")))
+            using (var package = new ExcelPackage(new FileInfo(@"YOUR PATH")))
             {
                 var sheet = package.Workbook.Worksheets[mainIndex];
                 for (int i = 0; i < 10; i++)
@@ -115,7 +115,7 @@ namespace MarLang
             int mainIndex;
             ListUsers.TryGetValue(chatId, out mainIndex);
 
-            using (var package = new ExcelPackage(new FileInfo(@"/Users/vlad/Projects/MarLang/MarLang/WordList.xlsx")))
+            using (var package = new ExcelPackage(new FileInfo(@"YOUR PATH")))
             {
                 var sheet = package.Workbook.Worksheets[mainIndex];
                 sheet.InsertRow(4,1);
@@ -164,7 +164,7 @@ namespace MarLang
         {
             Dictionary<long,int> result = new Dictionary<long, int>();
             List<IsDeletedClass> listDeleted = new List<IsDeletedClass>();
-            using (var package = new ExcelPackage(new FileInfo(@"/Users/vlad/Projects/MarLang/MarLang/WordList.xlsx")))
+            using (var package = new ExcelPackage(new FileInfo(@"YOUR PATH")))
             {
                 var sheet = package.Workbook.Worksheets[0];
                 for (int i = 1; !string.IsNullOrEmpty(sheet.Cells[$"A{i}"].Text); i++)
@@ -184,7 +184,7 @@ namespace MarLang
             for (int i = 0; i < arrayUsersQuizWords.Length; i++)
                 newArray[i] = arrayUsersQuizWords[i];
             arrayUsersQuizWords = newArray;
-            using (var package = new ExcelPackage(new FileInfo(@"/Users/vlad/Projects/MarLang/MarLang/WordList.xlsx")))
+            using (var package = new ExcelPackage(new FileInfo(@"YOUR PATH")))
             {
                 var sheet = package.Workbook.Worksheets[0];
                 for (int i = 1; true; i++)
@@ -203,10 +203,10 @@ namespace MarLang
         }
         public static string CreateExcelFile(long chatId)
         {
-            string path = @"/Users/vlad/Projects/MarLang/MarLang/send.xlsx";
+            string path = @"YOUR NEW EXCEL FILE PATH";
             int mainIndex;
             ListUsers.TryGetValue(chatId, out mainIndex);
-            using (var package = new ExcelPackage(new FileInfo(@"/Users/vlad/Projects/MarLang/MarLang/WordList.xlsx")))
+            using (var package = new ExcelPackage(new FileInfo(@"YOUR PATH")))
             {
                 using (var package1 = new ExcelPackage())
                 {

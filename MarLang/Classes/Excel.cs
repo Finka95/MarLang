@@ -19,8 +19,6 @@ namespace MarLang
         }
         public static bool DeleteWord(long chatId ,string word)
         {
-            string st = new string("sfdsf");
-            int dfdf = 12;
             int mainIndex;
             ListUsers.TryGetValue(chatId, out mainIndex);
             using (var package = new ExcelPackage(new FileInfo(@"YOUR PATH")))
